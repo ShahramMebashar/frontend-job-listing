@@ -1,9 +1,5 @@
 import { css, Theme } from "@emotion/react"
-import { PropsWithChildren } from "react"
-
-interface AttributeButtonProps {
-    onClick?: (e: MouseEvent) => void
-}
+import { MouseEvent, PropsWithChildren } from "react"
 
 const style = (theme: Theme) => css({
     borderRadius: '4px',
@@ -19,6 +15,6 @@ const style = (theme: Theme) => css({
         color: theme.colors.lightCyan,
     }
 });
-export default function AttributeButton({ children, ...props } : PropsWithChildren & AttributeButtonProps) {
+export default function AttributeButton({ children, ...props } : PropsWithChildren & {onClick: (e: MouseEvent<HTMLButtonElement>) => void}) {
     return <button css={style} {...props}>{ children }</button>
 }
