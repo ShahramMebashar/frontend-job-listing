@@ -1,0 +1,15 @@
+export type Job = {
+    id: string | number,
+    role: string,
+    level: string,
+    position: string,
+    tools: string[],
+    languages: string[],
+    location: string,
+    postedAt: string,
+    contract: 'Full Time' | 'Part Time',
+    company: string,
+    logo: string,
+    new: boolean, 
+    featured: boolean,
+}
